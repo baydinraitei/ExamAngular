@@ -1,6 +1,7 @@
 export class StatistiquesModel {
-    id: string;
-    titre: string;
-    valeur: string;
-    appreciation: string;
+ 
+
+  
+    constructor(public id: string, public valeur: string, public appreciation: string, public titre: string) {
+    }
 }

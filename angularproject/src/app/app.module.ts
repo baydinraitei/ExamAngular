@@ -12,6 +12,7 @@ import { StatistiquesComponent } from './statistiques/statistiques.component';
     StatistiquesComponent,
     
   ],
+  //import nécéssaires
   imports: [
     BrowserModule, HttpClientModule
   ],

@@ -5,7 +5,7 @@ import { StatistiquesComponent } from './statistiques.component';
 describe('StatistiquesComponent', () => {
   let component: StatistiquesComponent;
   let fixture: ComponentFixture<StatistiquesComponent>;
-
+//fonction asynchrone
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ StatistiquesComponent ]
