@@ -1,6 +1,7 @@
 import { StatistiquesModel } from './../models/statistiques';
-import { Component, OnInit } from '@angular/core';
-
+import { Component, Input, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { StatistiquesService } from '../statistiques.service';
 @Component({
   selector: 'app-statistiques',
   templateUrl: './statistiques.component.html',
@@ -15,9 +16,24 @@ export class StatistiquesComponent implements OnInit {
     { id: 'test', titre: 'Démographie au panama', valeur: '50M', appreciation: 'SUCCES' },
 
 ];
-  constructor() { }
 
+@Input() statistiqueWS: StatistiquesModel;
+  constructor(public statistiqueService: StatistiquesService) { }
+ 
   ngOnInit(): void {
-  }
+    this.statistiqueService.recupererStats().subscribe(
+        (datas) => {
+            console.log(datas);
+            this.statistiqueWS = datas as StatistiquesModel;
+        }
+    );
+}
 
+supprimer(): void{
+    this.statistiqueService.supprimerStats().subscribe(
+        (datas) => {
+            console.log(datas);
+        }
+    );
+}
 }
