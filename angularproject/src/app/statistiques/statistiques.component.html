@@ -1,2 +1,9 @@
 <p> {{ statistiqueA.titre }} </p>
 <p> {{ statistiqueB.titre }}</p>
+
+<p *ngFor="let stat of tableauStat">
+    {{stat.id}}
+    {{stat.titre}}
+    {{stat.valeur}}
+    {{stat.appreciation}}
+</p>
