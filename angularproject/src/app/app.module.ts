@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterOutlet } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { StatistiquesComponent } from './statistiques/statistiques.component';
@@ -7,7 +8,8 @@ import { StatistiquesComponent } from './statistiques/statistiques.component';
 @NgModule({
   declarations: [
     AppComponent,
-    StatistiquesComponent
+    StatistiquesComponent,
+    
   ],
   imports: [
     BrowserModule
